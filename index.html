@@ -6,31 +6,7 @@
     <title>Bykar prozet</title>
 
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-          },
     
-    backgroundImage: {
-      'custom-pattern': "url('/s-PNG')",
-    },
-            colors: {
-
-              clifford: '#da373d',
-              'bike-primary': '#E76f51',
-              'bike-primary-bg': 'rgba(231, 111, 81, 0.1)',
-            },
-    
-            backgroundImage: {
-              'custom-pattern': "url('/s-PNG')",
-            },
-          },
-        },
-      };
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-
 
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -40,6 +16,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+      },
+
+        colors: {
+
+          clifford: '#da373d',
+          'bike-primary': '#E76f51',
+          'bike-primary-bg':'rgba(231, 111, 81, 0.1)',
+          'bike-cad':' bg-slate-200'
+        },
+
+        //  backgroundImage: {
+    
+        //   biker: "url('images/slider/bike4.png')",
+        //   bannerImage:"url('.images/slider/bike3.png')",
+        //  },
+        },
+  }
+    
+  
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
 
 <style>
     .font-poppins{
@@ -87,7 +89,7 @@
         
             </ul>
           </div>
-          <a class="btn btn-ghost text-5xl ">Biker zone</a>
+          <a class="lg:btn btn-ghost text-2xl font-bold   sm:text-3xl">Biker zone</a>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
@@ -103,7 +105,7 @@
       </div>
  </nav>
  <!--slider carousel  -->
- <div class="carousel w-full  lg:h-[550px] bg-[#e76f5159]">
+ <div class="carousel w-full  lg:h-[550px] bg-[#af857a59]">
   <!-- carousel 1 -->
   <div id="slide1" class="carousel-item relative w-full">
 <div class="flex flex-col lg:flex-row p-24">
@@ -118,14 +120,16 @@
     <button class="btn bg-bike-primary text-white">Secilet</button>
   </div>
 
-   <div class=" flex-1 ">
-    <div class="">
-    <img
-    src="./images/slider/bike1.png"
-    class="hidden " /> 
+   <div class=" flex">
+    <div class=" sm:hidden flex">
+      <img  class="" src="./456587055_122176691930203783_7531689566059050500_n.jpg " alt="">
+    
     </div>
-    <div>
-    <img  class="lg:hidden" src="./s-1.PNG " alt="">
+  
+    <div class="hidden lg:flex">
+   <img
+    src="./images/slider/bike1.png"
+    class=" " /> 
    </div>
    </div>
   </div>
@@ -218,36 +222,129 @@
 
 
      <!-- main section -->
-      <main class="md:container w-auto  bg-custom-pattern bg-cover bg-center h-screen">
-<div class=" bg-custom-pattern bg-cover bg-center h-screen">
- <div class="flex gap-6 justify-center "> 
+      <main class=" w-full m-6 h-auto bg-[#bbb2af] ">
+<div class="">
+ <div class="grid grid-cols justify-center sm:grid-cols-4 m-9 "> 
   <div ><img src="./456587055_122176691930203783_7531689566059050500_n.jpg" alt="">
          
     <h1>Name:Sumita Rani</h1>
     <!-- <p class="flex gap-4"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFS0lEQVR4nLWVa0xTZxjHq8lcYrLMbck+bFm2D2bL3JxDet5yG+fUVqrrOaftaQ9CUFYpFgQZYJxiS885LUW8cFEuFRRvDNhgXlBRmMWZjS3zNi8x6gcTsikgGEUUzZQJz3I6EWov4Mae5P/lvE/+vzyX9z0SyQSDJ0Onr9VJP7ZqpBFWJuRdyf8dVgaLFvTolIMN69qYEH2rcAneVxAX2c3pZZdt6rmhkw7keclUXoe2FcRH3dmdoYb6bNpLezJIcLDhPbm0NCSYD4qm5RhOVmE42YQRpDUign4lOFgvq9xiJB48D/SGqyFvUfgj3iDr5vWoNGPBzJe9oDj5FSKoYQwnexBBncdw8glGkB3h83Vv+oVaydAosdJg0LGqy6ahIln5mGNQu0QimSJ6YIqF7yOCHEQ4VTuLZad5vuG0FOHUA4STu/2CBb3stFjNRMEjKv4C7+cY6SLRQyanzIigIGye+m2vLhDUdgwnu3yga9jQVx1sePdEQFUpKqjNpLzmLhjQLx6AXJ2ICNLtM3OcqsBw6o4P2EKHqkvGma2o7ctVUJI8D4qMBNRljX7nGVl3oL2JUNJvIZy8jeHUXp9Dm06attU8P8g8Kagwz4etK1Rw91c7HC8zgitF+exc0KMef9BQkpyO4eRJDKfuSeX0Bz4JnA4VVKWqfGDbU1VQvkwJhUYCTriS4MFvTnh4Lh8GzjqheCnxLNeul/nOTyKZguFks7jVMjlN+20Hp8NsleaYZ0bbUlVQnETAwYJ4uPTdl3D/TJ4HOFZblilGW21Av/vMlaA04qJhOLU80BgkVi2KLzMpHosmu1eowZUeA/dOO3xgXmDzP+DaLAo4JuyiL5jkRLBEwk8NCF5DS0PEp1E0Kjcphs/VpweFjgXvSFsAHIO+9gHL/W+4V/CaOTPyYsNvikabk+TDV/dnjwve/BTsSlYOWbVY4HaOF4Je1ikalSbNG77QsGJccJFJ7gFvNsoHxOv4vJ/4RmMEdUAW/fmHQSt2Pq24KiUG9ufHBoX2n3LAuoSoITFf3I1crXTxWD8kV88R5+sRTu4LDNYhlytZOei5RlkUOOMihnrbbQHB3/C6J+UmhQdck0kCp5fdyKWwj0b8wmJiXn/6kwCEU2v9Qm0MWl0QH3lbfPTHXKdhZ0IEXG3K8gLeO5MHtTYa1idEDtVnjz6bO9MXgkUrfWTRYJ+O+EZFqV8Li9bMDlZtIsegzuJE+YB4lytMiqH8uMjedUsiB/duZGB/iQGuHM6C9hoTfLtRBzstJNhjwwZKjIQnvzxJMWg3yLo4HWIDQgIFz86aZtFKF/IM4mxamTmHCplZ4yRvdny/Cq4cyoQTu4xwsn4ZdLSugrONqVCdqyrLobAFNgZxFq3UnKPF3pD8l9CsaXmPsbXmsI621mqn4S8R/LzONKSAQ1jVzdrb9mgsh1Us3zjt3wOtre8YBHfrkg0/96zec+1JXlMvVBVlwOmG5V7Qa0dXQl3xYiisawe+8Qakuy72G+zuGwx31PTCUL2t5bNY+/FOrrETNrX0j6q5CypLLVBTmAhNLhM0lCZB9frFsKW+zStvw5E+SCk7d58V3AcnXL2eP/rJorwfeguab3tDx6jw8HUobjgFRfsuwaaWuwHzVu64+qdBOHZgXKjZfPYlVnB35DfdCmj2okotO9+v444tDV6t4M7OrL78cLKgI21n7cf/CNpyVmi7sr65b9KgI0qruNCvsbSo/EI1/IEZCet+vDnZUFG2huvA2t27/INzj8yOc57oS6+8eGeyleY638cK7p8CVkxbm5X/l0jLobn+wH8DeBuFpieSlv8AAAAASUVORK5CYII=">: No Love <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAH8UlEQVR4nO1ca2wcVxkdKEU8JAhFPMWr4g8ICRAWKNCI9czc+93Ztdd1EjtxIjuJXVuO5EZEDm7dpG4edZLaqdcCCdEfLaWC/skf+IVAiBoRe+fe8capyauOk+A8XPL0a2f3xkmaQZ8bV8Gwtvc543iOdKSVpfWce2bvne/ee+4oig8fPnz48OHDx/JETyDwEZOQVSaley3DeMtibJRTmjB1/T2TkNsCYNxibMQyjD+YmvYzU9O+my8tXFW/h9fAa+E18dqoAbWgJouxy/2G8TdT1/eg5sOVlY8obsEMBL7BKf0lB5gYKCubHK6vv33lmWec8X37HLujw0lGIk7i5Zed+EsvOWN79zqjzc3OcG3trf5QKC4Yu2RS2tYTCKzIVseRVas+IyjdYwFcwv+N1xjdsWPmmnht1IBaUNPYvn0Oahx+6qnbA+HwJGrnAL/oU9WvK4VCH6Wftxh7UwAkzzU0TI+/+KIju7vT4tiePc47mzcnBUCcM9YeXbny4+nqiJWWfkIA7OeE2EObNyfHdu9OW8d4e7sz3NAwzSmVHOB3/zCMzyn5BNf1TYLS+Nn6+lt4R2Wagudy8sAB51RNTRK7Vq+u/3ixOvpU9SecsdHTNTVJ/B/Z6rA7O53hurpbgtIpk9LqnBsXKyp6lDP2Zqy01Mauka1gOYdXn3vOsYJBW1DavJAWTsjPLcOw8Tu51oE9o7+kBHW8gW3OjXnvd5WeE+vX2/ahQzkXLe9z6sABZ6CsLCEY+5WjKB+aqwP/xgF+PRAOx6cOHsybDmzj8XXrEpyxv2PbszOvqOhRYRg9p6urkzgQ50u0fED8sdWrbcHYoblaBEBkcPXqvN7EWSa7upxT1dVJwdhbWGVkbKAF8DrejUKYJ2dN7OhwYiUlNqe0cVYHp7QJhw8cqwqlA008vm6dLQBezcg8k9IqHA8KccflHE60tzuC0kQfwLdMQr6Nnyf37y+4Dmx7LBRKCEor0zJP6PpnBaWTOKgWWrS8z0vbt78nAE4h8bNbOm6+8IKD9SLWm4v/9TH22pm6OumWaImMRJx/VlTYSPzsppah2lopAF5ZlHm9hHxZUJrMRZ0nsyQW6ZkU6rlmvKMDh5RkjLEvLdx9ATqxqHRbtPQYcYrICTk4r3lYawmAa/koluUSJ3rCAa7/vxr1A/Tp+g9jpaVTbouVHmUsFJqKatoPUhpoEtLqd9/ulAbigxWnkikNtILBv/y7pcX1Oy09yndbWpx+xv6U2kDGRvzxrzulgbhkZjF2PqWBHMD2QvkiPUosZzil8dQGEnIn0dXlulDpUaI36NG8BhZy4UAuMaI3pq7fna8LT+RzrU0uceLwxgFSd2ERDA5c27XLdaHSo8QHLD5o5/sFdp1rbLzttlDpUWKJh6VeSgNNXS8+Wlo66bZQ6VGeqa2dNgnZldJAXL7mAOO43ee2WOlB4uIq7gimNHBmHKS0G7ct3RYrPUZcJcc96AX3SHgg8BUOkPAL6u7/MvBCU9NdDBTMa94HYyFjr53funXa7bsuPVT/9QeD8Whx8ROLMtAC+KrFWNz/FXbPGHiltdURjB1X0oEg5JWhLVsSbt996QEOrl07Yer62rQM5IbxKU7pzZsZhHbkQ8TrbW04+7iSURTOBFh/rLx8WdeFA08+ORXV9U1KpsDQ5EhT07KcnVxubr5nAQzOuw+yEI4Q8jWMfbm5yS5dIKYS+g0jzlW1SMkWnNKKWElJHNOebjdMFogYALUY+62SKwjG3nhn06ak2w2TBSBmD02AG1GAx3JmYE8g8DHB2PCl7dvvuN1AmUfGOztnum4fIbqSa2BaSgBMPbSlTSTinKyqwkhbRMkXTFUNWcFgHDdYpNsNzjFHmpruCICTOYv3poIA2HWsvPyheqjgSvzMsQdKH8+reQ+YePjkxo1xtxueC2J4UzBmc01TlULhRGXlRy2A6NmGBndzhDmo946Gw3EBsE0pNHoCgRUC4PyFbdvuLNV93sE1a2zO2G8Ut9CLgUzGrl52MYabESMR53RNTYID/DWrJH4uIFT1O5ipvtraes91Y9IITFqM9WdyzCwviGraj7BGvP78866bsxDPNTTcsgCGYoR8WvES+lT1pwLA9rKJ/9q6ddqk9KIIBL6oeBFcVQED2bgQ6bZZc4nLcoKxizhuK15GVNPCXjPxfGPj9JIwbxZ9hDDuke58tr5eckpHFnVMwUvgmqbioWq3TMTtyKEtW3Bx4BQeFFeWIqLFxU9giVNoE7FIPlFVNSUoNT33tE0XXFWLLIDJK88+W7Dp2WBFxSSn9M+eqfOyRS+l3+eUjl/eseNuPs3DVwAcDYdtTsjrrs8w8jFj4ZSOXXj66bzMnW+0tWEAMinmi6AtdXBKH+eMXcTZQC5PYb7b0nJPAMgoIRuVhx1RgMcEY4Ona2pk1qH2SMTBIBQHuMEJWaksF7xN6SfxfQwnN2zIeGUbv3diwwbcfnx7ydV4ucDhyspHLMZ+f6y83Ma3DKUbeIyVlc28ogQXd5XlCuf9I7b7+0Mhe7HR4pm4GQAe/Nvptn7PgFPauNDUD8fL+69qGlt02HE5gWuaalI6Mdrc/D9lDh4AGlyzBvcujpia9gW3tXoWvar6TQ5wAVeMZ827tnOng6974pS2O7t3f9htjZ5HTyCwggP0Hq+qip+pq8MS5brfZdMETsMEY68Kw/hjLt4z6MOHDx8+fPjw4UN5EP8BaqoIcThIj00AAAAASUVORK5CYII="></p> </div>  -->
- <p>Life style:kri </p>
+ <p>Life style: </p>
  
   </div>
   <div><img src="./456587055_122176691930203783_7531689566059050500_n.jpg" alt="">
           
     <h1>Name:Sumita Rani</h1>
     <!-- <p class="flex gap-4"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFS0lEQVR4nLWVa0xTZxjHq8lcYrLMbck+bFm2D2bL3JxDet5yG+fUVqrrOaftaQ9CUFYpFgQZYJxiS885LUW8cFEuFRRvDNhgXlBRmMWZjS3zNi8x6gcTsikgGEUUzZQJz3I6EWov4Mae5P/lvE/+vzyX9z0SyQSDJ0Onr9VJP7ZqpBFWJuRdyf8dVgaLFvTolIMN69qYEH2rcAneVxAX2c3pZZdt6rmhkw7keclUXoe2FcRH3dmdoYb6bNpLezJIcLDhPbm0NCSYD4qm5RhOVmE42YQRpDUign4lOFgvq9xiJB48D/SGqyFvUfgj3iDr5vWoNGPBzJe9oDj5FSKoYQwnexBBncdw8glGkB3h83Vv+oVaydAosdJg0LGqy6ahIln5mGNQu0QimSJ6YIqF7yOCHEQ4VTuLZad5vuG0FOHUA4STu/2CBb3stFjNRMEjKv4C7+cY6SLRQyanzIigIGye+m2vLhDUdgwnu3yga9jQVx1sePdEQFUpKqjNpLzmLhjQLx6AXJ2ICNLtM3OcqsBw6o4P2EKHqkvGma2o7ctVUJI8D4qMBNRljX7nGVl3oL2JUNJvIZy8jeHUXp9Dm06attU8P8g8Kagwz4etK1Rw91c7HC8zgitF+exc0KMef9BQkpyO4eRJDKfuSeX0Bz4JnA4VVKWqfGDbU1VQvkwJhUYCTriS4MFvTnh4Lh8GzjqheCnxLNeul/nOTyKZguFks7jVMjlN+20Hp8NsleaYZ0bbUlVQnETAwYJ4uPTdl3D/TJ4HOFZblilGW21Av/vMlaA04qJhOLU80BgkVi2KLzMpHosmu1eowZUeA/dOO3xgXmDzP+DaLAo4JuyiL5jkRLBEwk8NCF5DS0PEp1E0Kjcphs/VpweFjgXvSFsAHIO+9gHL/W+4V/CaOTPyYsNvikabk+TDV/dnjwve/BTsSlYOWbVY4HaOF4Je1ikalSbNG77QsGJccJFJ7gFvNsoHxOv4vJ/4RmMEdUAW/fmHQSt2Pq24KiUG9ufHBoX2n3LAuoSoITFf3I1crXTxWD8kV88R5+sRTu4LDNYhlytZOei5RlkUOOMihnrbbQHB3/C6J+UmhQdck0kCp5fdyKWwj0b8wmJiXn/6kwCEU2v9Qm0MWl0QH3lbfPTHXKdhZ0IEXG3K8gLeO5MHtTYa1idEDtVnjz6bO9MXgkUrfWTRYJ+O+EZFqV8Li9bMDlZtIsegzuJE+YB4lytMiqH8uMjedUsiB/duZGB/iQGuHM6C9hoTfLtRBzstJNhjwwZKjIQnvzxJMWg3yLo4HWIDQgIFz86aZtFKF/IM4mxamTmHCplZ4yRvdny/Cq4cyoQTu4xwsn4ZdLSugrONqVCdqyrLobAFNgZxFq3UnKPF3pD8l9CsaXmPsbXmsI621mqn4S8R/LzONKSAQ1jVzdrb9mgsh1Us3zjt3wOtre8YBHfrkg0/96zec+1JXlMvVBVlwOmG5V7Qa0dXQl3xYiisawe+8Qakuy72G+zuGwx31PTCUL2t5bNY+/FOrrETNrX0j6q5CypLLVBTmAhNLhM0lCZB9frFsKW+zStvw5E+SCk7d58V3AcnXL2eP/rJorwfeguab3tDx6jw8HUobjgFRfsuwaaWuwHzVu64+qdBOHZgXKjZfPYlVnB35DfdCmj2okotO9+v444tDV6t4M7OrL78cLKgI21n7cf/CNpyVmi7sr65b9KgI0qruNCvsbSo/EI1/IEZCet+vDnZUFG2huvA2t27/INzj8yOc57oS6+8eGeyleY638cK7p8CVkxbm5X/l0jLobn+wH8DeBuFpieSlv8AAAAASUVORK5CYII=">: No Love <img src="data:image/png;base64,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"></p> </div>  -->
- <p>Life style:kri </p>
+ <p>Life style: </p>
  </div>
   <div><img src="./456587055_122176691930203783_7531689566059050500_n.jpg" alt="">
           
     <h1>Name:Sumita Rani</h1>
     <!-- <p class="flex gap-4"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFS0lEQVR4nLWVa0xTZxjHq8lcYrLMbck+bFm2D2bL3JxDet5yG+fUVqrrOaftaQ9CUFYpFgQZYJxiS885LUW8cFEuFRRvDNhgXlBRmMWZjS3zNi8x6gcTsikgGEUUzZQJz3I6EWov4Mae5P/lvE/+vzyX9z0SyQSDJ0Onr9VJP7ZqpBFWJuRdyf8dVgaLFvTolIMN69qYEH2rcAneVxAX2c3pZZdt6rmhkw7keclUXoe2FcRH3dmdoYb6bNpLezJIcLDhPbm0NCSYD4qm5RhOVmE42YQRpDUign4lOFgvq9xiJB48D/SGqyFvUfgj3iDr5vWoNGPBzJe9oDj5FSKoYQwnexBBncdw8glGkB3h83Vv+oVaydAosdJg0LGqy6ahIln5mGNQu0QimSJ6YIqF7yOCHEQ4VTuLZad5vuG0FOHUA4STu/2CBb3stFjNRMEjKv4C7+cY6SLRQyanzIigIGye+m2vLhDUdgwnu3yga9jQVx1sePdEQFUpKqjNpLzmLhjQLx6AXJ2ICNLtM3OcqsBw6o4P2EKHqkvGma2o7ctVUJI8D4qMBNRljX7nGVl3oL2JUNJvIZy8jeHUXp9Dm06attU8P8g8Kagwz4etK1Rw91c7HC8zgitF+exc0KMef9BQkpyO4eRJDKfuSeX0Bz4JnA4VVKWqfGDbU1VQvkwJhUYCTriS4MFvTnh4Lh8GzjqheCnxLNeul/nOTyKZguFks7jVMjlN+20Hp8NsleaYZ0bbUlVQnETAwYJ4uPTdl3D/TJ4HOFZblilGW21Av/vMlaA04qJhOLU80BgkVi2KLzMpHosmu1eowZUeA/dOO3xgXmDzP+DaLAo4JuyiL5jkRLBEwk8NCF5DS0PEp1E0Kjcphs/VpweFjgXvSFsAHIO+9gHL/W+4V/CaOTPyYsNvikabk+TDV/dnjwve/BTsSlYOWbVY4HaOF4Je1ikalSbNG77QsGJccJFJ7gFvNsoHxOv4vJ/4RmMEdUAW/fmHQSt2Pq24KiUG9ufHBoX2n3LAuoSoITFf3I1crXTxWD8kV88R5+sRTu4LDNYhlytZOei5RlkUOOMihnrbbQHB3/C6J+UmhQdck0kCp5fdyKWwj0b8wmJiXn/6kwCEU2v9Qm0MWl0QH3lbfPTHXKdhZ0IEXG3K8gLeO5MHtTYa1idEDtVnjz6bO9MXgkUrfWTRYJ+O+EZFqV8Li9bMDlZtIsegzuJE+YB4lytMiqH8uMjedUsiB/duZGB/iQGuHM6C9hoTfLtRBzstJNhjwwZKjIQnvzxJMWg3yLo4HWIDQgIFz86aZtFKF/IM4mxamTmHCplZ4yRvdny/Cq4cyoQTu4xwsn4ZdLSugrONqVCdqyrLobAFNgZxFq3UnKPF3pD8l9CsaXmPsbXmsI621mqn4S8R/LzONKSAQ1jVzdrb9mgsh1Us3zjt3wOtre8YBHfrkg0/96zec+1JXlMvVBVlwOmG5V7Qa0dXQl3xYiisawe+8Qakuy72G+zuGwx31PTCUL2t5bNY+/FOrrETNrX0j6q5CypLLVBTmAhNLhM0lCZB9frFsKW+zStvw5E+SCk7d58V3AcnXL2eP/rJorwfeguab3tDx6jw8HUobjgFRfsuwaaWuwHzVu64+qdBOHZgXKjZfPYlVnB35DfdCmj2okotO9+v444tDV6t4M7OrL78cLKgI21n7cf/CNpyVmi7sr65b9KgI0qruNCvsbSo/EI1/IEZCet+vDnZUFG2huvA2t27/INzj8yOc57oS6+8eGeyleY638cK7p8CVkxbm5X/l0jLobn+wH8DeBuFpieSlv8AAAAASUVORK5CYII=">: No Love <img src="data:image/png;base64,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"></p> </div>  -->
- <p>Life style:kri </p>
+ <p>Life style: </p>
+ </div>
+ <div><img src="./456587055_122176691930203783_7531689566059050500_n.jpg" alt="">
+          
+  <h1>Name:Sumita Rani</h1>
+  <!-- <p class="flex gap-4"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFS0lEQVR4nLWVa0xTZxjHq8lcYrLMbck+bFm2D2bL3JxDet5yG+fUVqrrOaftaQ9CUFYpFgQZYJxiS885LUW8cFEuFRRvDNhgXlBRmMWZjS3zNi8x6gcTsikgGEUUzZQJz3I6EWov4Mae5P/lvE/+vzyX9z0SyQSDJ0Onr9VJP7ZqpBFWJuRdyf8dVgaLFvTolIMN69qYEH2rcAneVxAX2c3pZZdt6rmhkw7keclUXoe2FcRH3dmdoYb6bNpLezJIcLDhPbm0NCSYD4qm5RhOVmE42YQRpDUign4lOFgvq9xiJB48D/SGqyFvUfgj3iDr5vWoNGPBzJe9oDj5FSKoYQwnexBBncdw8glGkB3h83Vv+oVaydAosdJg0LGqy6ahIln5mGNQu0QimSJ6YIqF7yOCHEQ4VTuLZad5vuG0FOHUA4STu/2CBb3stFjNRMEjKv4C7+cY6SLRQyanzIigIGye+m2vLhDUdgwnu3yga9jQVx1sePdEQFUpKqjNpLzmLhjQLx6AXJ2ICNLtM3OcqsBw6o4P2EKHqkvGma2o7ctVUJI8D4qMBNRljX7nGVl3oL2JUNJvIZy8jeHUXp9Dm06attU8P8g8Kagwz4etK1Rw91c7HC8zgitF+exc0KMef9BQkpyO4eRJDKfuSeX0Bz4JnA4VVKWqfGDbU1VQvkwJhUYCTriS4MFvTnh4Lh8GzjqheCnxLNeul/nOTyKZguFks7jVMjlN+20Hp8NsleaYZ0bbUlVQnETAwYJ4uPTdl3D/TJ4HOFZblilGW21Av/vMlaA04qJhOLU80BgkVi2KLzMpHosmu1eowZUeA/dOO3xgXmDzP+DaLAo4JuyiL5jkRLBEwk8NCF5DS0PEp1E0Kjcphs/VpweFjgXvSFsAHIO+9gHL/W+4V/CaOTPyYsNvikabk+TDV/dnjwve/BTsSlYOWbVY4HaOF4Je1ikalSbNG77QsGJccJFJ7gFvNsoHxOv4vJ/4RmMEdUAW/fmHQSt2Pq24KiUG9ufHBoX2n3LAuoSoITFf3I1crXTxWD8kV88R5+sRTu4LDNYhlytZOei5RlkUOOMihnrbbQHB3/C6J+UmhQdck0kCp5fdyKWwj0b8wmJiXn/6kwCEU2v9Qm0MWl0QH3lbfPTHXKdhZ0IEXG3K8gLeO5MHtTYa1idEDtVnjz6bO9MXgkUrfWTRYJ+O+EZFqV8Li9bMDlZtIsegzuJE+YB4lytMiqH8uMjedUsiB/duZGB/iQGuHM6C9hoTfLtRBzstJNhjwwZKjIQnvzxJMWg3yLo4HWIDQgIFz86aZtFKF/IM4mxamTmHCplZ4yRvdny/Cq4cyoQTu4xwsn4ZdLSugrONqVCdqyrLobAFNgZxFq3UnKPF3pD8l9CsaXmPsbXmsI621mqn4S8R/LzONKSAQ1jVzdrb9mgsh1Us3zjt3wOtre8YBHfrkg0/96zec+1JXlMvVBVlwOmG5V7Qa0dXQl3xYiisawe+8Qakuy72G+zuGwx31PTCUL2t5bNY+/FOrrETNrX0j6q5CypLLVBTmAhNLhM0lCZB9frFsKW+zStvw5E+SCk7d58V3AcnXL2eP/rJorwfeguab3tDx6jw8HUobjgFRfsuwaaWuwHzVu64+qdBOHZgXKjZfPYlVnB35DfdCmj2okotO9+v444tDV6t4M7OrL78cLKgI21n7cf/CNpyVmi7sr65b9KgI0qruNCvsbSo/EI1/IEZCet+vDnZUFG2huvA2t27/INzj8yOc57oS6+8eGeyleY638cK7p8CVkxbm5X/l0jLobn+wH8DeBuFpieSlv8AAAAASUVORK5CYII=">: No Love <img src="data:image/png;base64,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"></p> </div>  -->
+<p>Life style: </p>
+</div>
+
+</div>
  </div>
  </div>
- </div>
+ <!-- bike model -->
+ <section class="m-9">
+  <div class="grid grid-cols justify-center gap-4 sm:grid-cols-4 gap-0">
+  <div class="card bg-base-100 w-64  shadow-xl">
+    <figure>
+      <img
+        src="./images/others/latest1.png"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body h-40 -mt-8">
+      <h2 class="card-title">
+        Bike
+        <div class="badge badge-secondary">NEW</div>
+      </h2>
+      <p>250cc style of model bike of naw model</p>
+
+      <div class="card-actions justify-end">
+       <h2>$2500</h2>
+       <h2>=</h2>
+       <p>50%</p>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-base-100 w-64  shadow-xl">
+    <figure>
+      <img
+        src="./images/others/latest1.png"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body h-40 -mt-8">
+      <h2 class="card-title">
+        Bike
+        <div class="badge badge-secondary">NEW</div>
+      </h2>
+      <p>250cc style of model bike of naw model</p>
+
+      <div class="card-actions justify-end">
+       <h2>$2500</h2>
+       <h2>=</h2>
+       <p>50%</p>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-base-100 w-64  shadow-xl">
+    <figure>
+      <img
+        src="./images/others/latest1.png"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body h-40 -mt-8">
+      <h2 class="card-title">
+        Bike
+        <div class="badge badge-secondary">NEW</div>
+      </h2>
+      <p>250cc style of model bike of naw model</p>
+
+      <div class="card-actions justify-end">
+       <h2>$2500</h2>
+       <h2>=</h2>
+       <p>50%</p>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-base-100 w-64  shadow-xl">
+    <figure>
+      <img
+        src="./images/others/latest1.png"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body h-40 -mt-8">
+      <h2 class="card-title">
+        Bike
+        <div class="badge badge-secondary">NEW</div>
+      </h2>
+      <p>250cc style of model bike of naw model</p>
+
+      <div class="card-actions justify-end">
+       <h2>$2500</h2>
+       <h2>=</h2>
+       <p>50%</p>
+      </div>
+    </div>
+  </div>
+  </div>
+ </section>
       </main>
 
 
 <!-- footer section -->
  <footer>
-  <footer class="footer footer-center bg-slate-200 text-base-content rounded p-10">
+  <footer class="footer footer-center bg-[#bd988d] text-base-content rounded p-10">
     <nav class="grid grid-flow-col gap-4">
       <a class="link link-hover">About us</a>
       <a class="link link-hover">Contact</a>
